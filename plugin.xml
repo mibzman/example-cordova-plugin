@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    id="example-cordova-plugin"
+    version="1.0.0">
+    <name>ExampleCordovaPlugin</name>
+    <description></description>
+    <license>MIT</license>
+    <keywords></keywords>
+    <repo>https://github.com/mibzman/example-cordova-plugin.git</repo>
+    <issue>https://github.com/mibzman/example-cordova-plugin/issues</issue>
+
+    <!-- android -->
+    <platform name="android">
+      <js-module src="www/plugin.js" name="plugin">
+        <runs/>
+
+        <!-- This is the window variable name you want, like window.ExampleCordovaPlugin -->
+        <clobbers target="ExampleCordovaPlugin" />
+      </js-module>
+      <config-file target="res/xml/config.xml" parent="/*">
+        <feature name="ExampleCordovaPlugin">
+          <param name="android-package" value="com.example.ExampleCordovaPlugin" />
+          <param name="onload" value="true" />
+        </feature>
+      </config-file>
+
+      <source-file src="src/android/com/example/ExampleCordovaPlugin.java" target-dir="src/com/example/" />
+    </platform>
+
+    <!-- ios -->
+    <platform name="ios">
+        <js-module src="www/plugin.js" name="plugin">
+            <runs/>
+            <clobbers target="ExampleCordovaPlugin" />
+        </js-module>
+        <config-file target="config.xml" parent="/*">
+            <feature name="ExampleCordovaPlugin">
+                <param name="ios-package" value="ExampleCordovaPlugin" onload="true" />
+            </feature>
+        </config-file>
+
+        <source-file src="src/ios/ExampleCordovaPlugin.swift" />
+    </platform>
+</plugin>
