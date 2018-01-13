@@ -1,4 +1,4 @@
-Cordova Plugin Template
+Example Cordova Plugin
 ======
 
-This is a simple starting point for building a Cordova plugin on iOS and Android.
+Made alongside the article found at https://medium.com/@sam_43786/how-to-develop-new-cordova-plugins-for-ionic-without-loosing-your-mind-19420452e02a
